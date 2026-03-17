@@ -1,3 +1,4 @@
+
 exports.handler = async (event) => {
   const headers = {
     'Access-Control-Allow-Origin': '*',
@@ -44,8 +45,8 @@ exports.handler = async (event) => {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        route: 'otp',
-        variables_values: otp,
+        route: 'q',
+        message: 'Your Sparshayu OTP is ' + otp + '. Valid for 5 minutes. Do not share with anyone.',
         numbers: phone,
         flash: 0
       })
